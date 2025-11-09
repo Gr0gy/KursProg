@@ -178,7 +178,7 @@ class CashierWindow(QMainWindow):
     
     def create_customer(self):
         """Создание нового клиента"""
-        from customer_dialog import CustomerDialog
+        from window.customer_dialog import CustomerDialog
         dialog = CustomerDialog(self.db, None, self)
         if dialog.exec() == QDialog.DialogCode.Accepted:
             # Обновляем поле телефона после создания клиента
@@ -351,7 +351,7 @@ class CashierWindow(QMainWindow):
         self.close()
     
     def change_theme(self):
-        from theme_dialog import ThemeDialog
+        from window.theme_dialog import ThemeDialog
         dialog = ThemeDialog(self.login_window, self)
         if dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_theme()

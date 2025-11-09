@@ -568,7 +568,7 @@ class StorekeeperWindow(QMainWindow):
             self.apply_dark_theme(theme_settings['color'])            
             
     def change_theme(self):
-        from theme_dialog import ThemeDialog
+        from window.theme_dialog import ThemeDialog
         dialog = ThemeDialog(self.login_window, self)
         if dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_theme()

@@ -8,9 +8,9 @@ from PyQt6.QtCore import Qt
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
 
-from config import DatabaseConfig
-from connection_window import ConnectionWindow
-from database import Database
+from edb.config import DatabaseConfig
+from window.connection_window import ConnectionWindow
+from edb.database import Database
 
 start = 0
 
@@ -87,7 +87,7 @@ def main():
                 db = Database(**db_params)
                 start = 1
                 # Показываем окно авторизации
-                from login_window import LoginWindow
+                from window.login_window import LoginWindow
                 login_window = LoginWindow(db)
                 login_window.show()
                 

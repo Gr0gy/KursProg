@@ -151,7 +151,7 @@ class LoginWindow(QMainWindow):
     
     def open_theme_dialog(self):
         """Открывает диалог смены темы"""
-        from theme_dialog import ThemeDialog
+        from window.theme_dialog import ThemeDialog
         dialog = ThemeDialog(self, self)
         dialog.exec()
     
@@ -323,12 +323,12 @@ class LoginWindow(QMainWindow):
         return color_map.get(color, color)
     
     def open_connection_settings(self):
-        from connection_window import ConnectionWindow
+        from window.connection_window import ConnectionWindow
         # Создаем временный config если его нет
         if hasattr(self.db, 'config'):
             config = self.db.config
         else:
-            from config import DatabaseConfig
+            from edb.config import DatabaseConfig
             config = DatabaseConfig()
             
         self.connection_window = ConnectionWindow(config)
@@ -350,17 +350,17 @@ class LoginWindow(QMainWindow):
             
             # Применяем тему к открываемому окну
             if user['role'] == 'storekeeper':
-                from storekeeper_window import StorekeeperWindow
+                from window.storekeeper_window import StorekeeperWindow
                 self.storekeeper_window = StorekeeperWindow(self.db, user, self)
                 self.apply_theme_to_window(self.storekeeper_window)
                 self.storekeeper_window.show()
             elif user['role'] == 'cashier':
-                from cashier_window import CashierWindow
+                from window.cashier_window import CashierWindow
                 self.cashier_window = CashierWindow(self.db, user, self)
                 self.apply_theme_to_window(self.cashier_window)
                 self.cashier_window.show()
             elif user['role'] == 'admin':
-                from admin_window import AdminWindow
+                from window.admin_window import AdminWindow
                 self.admin_window = AdminWindow(self.db, user, self)
                 self.apply_theme_to_window(self.admin_window)
                 self.admin_window.show()

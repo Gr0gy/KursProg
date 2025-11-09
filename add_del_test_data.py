@@ -6,8 +6,8 @@ import os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
 
-from config import DatabaseConfig
-from database import Database
+from edb.config import DatabaseConfig
+from edb.database import Database
 
 class TestDataManager:
     def __init__(self):

@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                              QFormLayout, QGroupBox)
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont
-from database import Database
+from edb.database import Database
 
 class ConnectionWindow(QMainWindow):
     def __init__(self, config):
@@ -99,7 +99,7 @@ class ConnectionWindow(QMainWindow):
             
             # Закрываем окно подключения и открываем окно авторизации
             self.close()
-            from login_window import LoginWindow
+            from window.login_window import LoginWindow
             self.login_window = LoginWindow(self.db)
             from main import start
             if(start):

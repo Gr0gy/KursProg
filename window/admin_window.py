@@ -5,7 +5,7 @@ from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                              QComboBox, QSpinBox, QTextEdit, QGroupBox)
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont
-from customer_dialog import CustomerDialog
+from window.customer_dialog import CustomerDialog
 
 class AdminWindow(QMainWindow):
     def __init__(self, db, user, login_window):
@@ -343,7 +343,7 @@ class AdminWindow(QMainWindow):
     # МЕТОДЫ ДЛЯ РАБОТЫ С ТЕМОЙ
     
     def change_theme(self):
-        from theme_dialog import ThemeDialog
+        from window.theme_dialog import ThemeDialog
         dialog = ThemeDialog(self.login_window, self)
         if dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_theme()

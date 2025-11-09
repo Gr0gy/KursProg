@@ -1,0 +1,35 @@
+# Файлы конфигурации Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Файлы конфигурации IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Файлы базы данных и конфигурации
+*.db
+*.sqlite3
+database_config.json
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Файлы операционной системы
+.DS_Store
+Thumbs.db
+
+# Распространяемые файлы
+dist/
+build/
+*.egg-info/

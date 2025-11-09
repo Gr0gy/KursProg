@@ -668,7 +668,7 @@ class Database:
         finally:
             conn.close()
     
-    def register_employee(self, login, password, full_name, role, warehouse_id, phone='', email=''):
+    def register_employee(self, login, password, full_name, role, warehouse_id, phone=' ', email=' '):
         conn = self._get_connection()
         cursor = conn.cursor()
         try:

@@ -617,7 +617,7 @@ class StorekeeperWindow(QMainWindow):
         }}
         QComboBox::drop-down {{
             border: 1px solid #cccccc;
-            background-color: white;
+            background-color: {color};
         }}
         QComboBox QAbstractItemView {{
             border: 2px solid #cccccc;
@@ -678,10 +678,30 @@ class StorekeeperWindow(QMainWindow):
         QSpinBox::up-button:hover, QSpinBox::down-button:hover {{
             background-color: {self.darken_color(color)};
         }}
-        QSpinBox::up-arrow, QSpinBox::down-arrow {{
-            width: 8px;
-            height: 8px;
-            color: white;
+        QSpinBox::up-arrow {{
+            border-left: 4px solid {color};
+            border-right: 4px solid {color};
+            border-bottom: 8px solid white;
+            width: 0px;
+            height: 0px;
+        }}
+        QSpinBox::down-arrow {{
+            border-left: 4px solid {color};
+            border-right: 4px solid {color};
+            border-top: 8px solid white;
+            width: 0px;
+            height: 0px;
+        }}
+        QComboBox::down-arrow {{
+            border-left: 4px solid {color};
+            border-right: 4px solid {color};
+            border-top: 8px solid white;
+            width: 0px;
+            height: 0px;
+        }}
+        QComboBox::down-arrow:on {{
+            border-top: {color};
+            border-bottom: 8px solid white;
         }}
         QDialog {{
             background-color: #f5f5f5;
@@ -738,7 +758,7 @@ class StorekeeperWindow(QMainWindow):
         }}
         QComboBox::drop-down {{
             border: 1px solid #555555;
-            background-color: #404040;
+            background-color: {color};
         }}
         QComboBox QAbstractItemView {{
             border: 2px solid #555555;
@@ -800,10 +820,30 @@ class StorekeeperWindow(QMainWindow):
         QSpinBox::up-button:hover, QSpinBox::down-button:hover {{
             background-color: {self.darken_color(color)};
         }}
-        QSpinBox::up-arrow, QSpinBox::down-arrow {{
-            width: 8px;
-            height: 8px;
-            color: white;
+        QSpinBox::up-arrow {{
+            border-left: 4px solid {color};
+            border-right: 4px solid {color};
+            border-bottom: 8px solid white;
+            width: 0px;
+            height: 0px;
+        }}
+        QSpinBox::down-arrow {{
+            border-left: 4px solid {color};
+            border-right: 4px solid {color};
+            border-top: 8px solid white;
+            width: 0px;
+            height: 0px;
+        }}
+        QComboBox::down-arrow {{
+            border-left: 4px solid {color};
+            border-right: 4px solid {color};
+            border-top: 8px solid white;
+            width: 0px;
+            height: 0px;
+        }}
+        QComboBox::down-arrow:on {{
+            border-top: {color};
+            border-bottom: 8px solid white;
         }}
         QDialog {{
             background-color: #2b2b2b;

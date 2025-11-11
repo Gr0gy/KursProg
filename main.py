@@ -17,7 +17,7 @@ start = 0
 def get_config_path():
     """Возвращает путь к файлу конфигурации в папке приложения"""
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    return os.path.join(current_dir, 'database_config.json')
+    return os.path.join(current_dir, 'edb', 'database_config.json')
 
 def test_database_connection(config):
     """Проверка подключения к базе данных"""

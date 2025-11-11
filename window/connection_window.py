@@ -97,12 +97,12 @@ class ConnectionWindow(QMainWindow):
             # Сохраняем настройки
             self.config.update_config(db_params)
             
-            # Закрываем окно подключения и открываем окно авторизации
+            # Закрываем окно подключения
             self.close()
             from window.login_window import LoginWindow
             self.login_window = LoginWindow(self.db)
             from main import start
-            if(start):
+            if(start == 0):
                 self.login_window.show()
             
         except Exception as e:
